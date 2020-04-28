@@ -1,0 +1,24 @@
+@import "~styles/variables"
+@import "~styles/utils/mixins"
+
+.button
+	display: inline-block
+	padding: 16px 50px
+	font-size: rem(13px)
+	line-height: 1
+	font-weight: 500
+	letter-spacing: 0.1em
+	text-transform: uppercase
+	color: $text-light
+
+	background-color: $button-bg
+	border: 2px solid $button-bg
+
+	cursor: pointer
+	transition: 0.2s
+	&:hover
+		background-color: transparent
+      color: $text-primary
+	&.button-alt
+		&:hover
+      	color: $text-dark

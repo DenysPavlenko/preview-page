@@ -1,0 +1,31 @@
+@import '~styles/variables'
+@import "~styles/utils/mixins"
+
+.gallery
+	&-filter
+		margin-top: -10px
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		margin-bottom: 57px
+		&-item
+			cursor: pointer
+			padding: 5px 0
+			transition: 0.2s
+			&:hover
+				color: $text-primary
+			&:not(:last-child)
+				margin-right: 2rem
+		&-item.active
+			color: $text-primary
+
+	&-cards
+		transition: 0.2s
+		&.hidden
+			opacity: 0
+
+
++media($breakpoint-md)
+	.gallery
+		&-filter-item
+			margin: 0 15px !important

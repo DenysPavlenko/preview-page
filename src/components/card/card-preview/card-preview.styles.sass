@@ -1,0 +1,56 @@
+@import "~styles/variables"
+@import "~styles/utils/mixins"
+
+.card-preview
+	position: relative
+	background-color: $card-bg
+	height: 15vw
+	display: block
+
+	&:hover
+		.card-preview-overlay
+			opacity: 1
+
+	&-image
+		width: 100%
+		height: 100%
+		background:
+			size: cover
+			repeat: no-repeat
+			position: 0 0
+	&-overlay
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: rgba($primary-color, 0.7)
+		z-index: 2
+		color: $text-light
+		display: flex
+		align-items: center
+		justify-content: center
+		opacity: 0
+		transition: 0.2s
+
+	&-scrollable
+		height: 23vw
+
+
++media($breakpoint-lg)
+	.card-preview
+		height: 20vw
+		&-scrollable
+			height: 30vw
+
++media($breakpoint-md)
+	.card-preview
+		height: 30vw
+		&-scrollable
+			height: 35vw
+
++media($breakpoint-sm)
+	.card-preview
+		height: 60vw
+		&-scrollable
+			height: 100vw

@@ -1,0 +1,27 @@
+@import '~styles/variables.sass'
+@import '~styles/utils/mixins'
+
+.cards
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -1vw
+	.card
+		max-width: calc(25% - 2vw)
+		margin: 0 1vw 2vw 1vw
+
++media($breakpoint-lg)
+	.cards
+		margin: 0 -15px
+		.card
+			max-width: calc(33.33% - 30px)
+			margin: 0 15px 30px 15px
+
++media($breakpoint-md)
+	.cards
+		.card
+			max-width: calc(50% - 30px)
+
++media($breakpoint-sm)
+	.cards
+		.card
+			max-width: calc(100% - 30px)
