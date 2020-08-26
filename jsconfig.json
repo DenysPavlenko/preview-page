@@ -1,9 +1,9 @@
 {
-	"compilerOptions": {
-		"baseUrl": "src",
-		"jsx": "react"
-	},
-	"include": [
-		"src"
-	]
+  "compilerOptions": {
+    "baseUrl": "src",
+    "jsx": "react"
+  },
+  "include": [
+    "src", "src/components/card/.component.jsx"
+  ]
 }
